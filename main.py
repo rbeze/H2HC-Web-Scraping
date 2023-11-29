@@ -20,4 +20,5 @@ for speaker in speakers_content:
     names = speaker.find_all("a", {"class": "card-link text-center font-weight-bold"})[0]
     speaker_name = names.text.split("-")[0]
     speaker_title = names.text.split("-")[1]
-    print(speaker_name, speaker_title)
+    speech_title = speaker.find_all("strong")[0].text
+    print(speaker_name, speaker_title, speech_title)
